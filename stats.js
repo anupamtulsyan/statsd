@@ -30,7 +30,7 @@ config.configFile(process.argv[2], function (config, oldConfig) {
   if (config.debug) {
     if (debugInt !== undefined) { clearInterval(debugInt); }
     debugInt = setInterval(function () { 
-      util.log("Counters:\n" + util.inspect(counters) + "\nTimers:\n" + util.inspect(timers));
+      util.log("counters:\n" + util.inspect(counters) + "\nTimers:\n" + util.inspect(timers));
     }, config.debugInterval || 10000);
   }
 
